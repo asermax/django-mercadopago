@@ -17,7 +17,9 @@ class MercadoPagoService(MP):
     """
 
     def __init__(self, account):
-        super().__init__(account.app_id, account.secret_key)
+        super(MercadoPagoService, self).__init__(
+            account.app_id, account.secret_key
+        )
         self.sandbox_mode(account.sandbox)
 
 

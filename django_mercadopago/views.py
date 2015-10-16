@@ -92,4 +92,4 @@ class PostPaymentView(View):
 
     @method_decorator(csrf_exempt)
     def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
+        return super(PostPaymentView, self).dispatch(*args, **kwargs)
